@@ -86,7 +86,7 @@ srpm: tarball
 rpm: tarball
 	$(RPM_WITH_DIRS) $(DIST_DEFINES) -bb $(SPECFILE)
 
-test-rpm: tarball
+test-rpm: test-tarball
 	$(RPM_WITH_DIRS) $(DIST_DEFINES) --define "testbuild 1" -bb $(SPECFILE)
 
 tag::
